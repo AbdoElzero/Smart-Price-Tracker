@@ -46,7 +46,7 @@ class Config:
 
     SWAGGER = SWAGGER_CONFIG
 
-    UPLOAD_FOLDER = os.path.join(BASE_DIR, "static", "uploads", "avatars")
+    UPLOAD_FOLDER = os.path.join('/tmp', 'uploads', 'avatars')
     MAX_CONTENT_LENGTH = 5 * 1024 * 1024
     ALLOWED_AVATAR_EXTENSIONS = {"png", "jpg", "jpeg", "webp"}
 
