@@ -23,7 +23,8 @@ def create_app(config_name=None):
 
     _configure_celery(app)
 
-    os.makedirs(app.config["UPLOAD_FOLDER"] = '/tmp/uploads/avatars' )
+    app.config["UPLOAD_FOLDER"] = '/tmp/uploads/avatars' 
+    os.makedirs(app.config["UPLOAD_FOLDER"], exist_ok=True)
 
     from app import models  # noqa: F401
     from app.utils import jwt_callbacks  # noqa: F401
